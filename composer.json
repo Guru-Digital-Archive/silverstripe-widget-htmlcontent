@@ -1,6 +1,6 @@
 {
     "name": "gdmedia/silverstripe-widget-htmlcontent",
-    "description": "Widget that lists links to internal or external urls",
+    "description": "WYSIWYG HTMML content widget",
     "type": "silverstripe-module",
     "homepage": "https://github.com/guru-digital/silverstripe-widget-htmlcontent",
     "keywords": ["silverstripe", "widget", "html", "content"],
