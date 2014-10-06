@@ -35,10 +35,9 @@ class HTMLContentWidget extends Widget {
 
     public function getCMSFields() {
         $fields = parent::getCMSFields();
-
-        $fields->addFieldToTab("Root.Main", new TextField('WidgetLabel', 'Widget Label'), "Enabled");
-        $fields->addFieldToTab("Root.Main", new TextField('WidgetName', 'Widget Name'), "Enabled");
-
+        $fields->push(TextField::create("WidgetLabel", "Widget Label"));
+        $fields->push(TextField::create("WidgetTitle", "Widget Title"));
+        $fields->push(HtmlEditorField::create("WidgetContent", "Content"));
         return $fields;
     }
 
