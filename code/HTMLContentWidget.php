@@ -1,6 +1,7 @@
 <?php
 
-class HTMLContentWidget extends Widget {
+class HTMLContentWidget extends Widget
+{
 
     private static $db = array(
         "WidgetContent" => "HTMLText"
@@ -21,7 +22,8 @@ class HTMLContentWidget extends Widget {
      */
     private static $description = "Display a title and HTML Content.";
 
-    public function SmallWidget() {
+    public function SmallWidget()
+    {
         $result = array(
             "WidgetTitle"   => $this->Title,
             "WidgetContent" => $this->WidgetContent
@@ -29,16 +31,17 @@ class HTMLContentWidget extends Widget {
         return $result;
     }
 
-    public function Title() {
+    public function Title()
+    {
         return $this->WidgetLabel;
     }
 
-    public function getCMSFields() {
+    public function getCMSFields()
+    {
         $fields = parent::getCMSFields();
         $fields->push(TextField::create("WidgetLabel", "Widget Label"));
         $fields->push(TextField::create("WidgetTitle", "Widget Title"));
         $fields->push(HtmlEditorField::create("WidgetContent", "Content"));
         return $fields;
     }
-
 }
